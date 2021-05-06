@@ -41,17 +41,17 @@ ti_sum = data_df['total_items'].sum()
 print(oa_sum)
 print(ti_sum)
 
-# Then calculate average by dividing the total order amount (oa_sum) by the total items amount (ti_sum)
+# Get average by dividing the total order amount (oa_sum) by the total items amount (ti_sum)
 AOV = oa_sum/ti_sum
 AOV
 
-# Print Average Order Value (AOV) with only 2 decimal places and the dollar sign
+# Print Average Order Value (AOV) with  dollar sign and only 2 decimal places
 print("%.2f" % AOV)
 
 # Print correct explanation with $
 '${:,.2f}'.format(AOV)
 
-# Incorrect calculation explained as a mistaken count() instead of sum() function
+# Incorrect calculation due to the use of count() instead of sum() function
 oa_sum = data_df['order_amount'].sum()
 ti_count = data_df['total_items'].count()
 AOV = oa_sum/ti_count
